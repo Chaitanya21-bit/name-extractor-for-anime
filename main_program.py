@@ -9,10 +9,7 @@ result = requests.get(url).text
 doc = BeautifulSoup(result, "html.parser")
 
 # print(doc.prettify())
-
 mangas = doc.find_all(class_="latest_item")
-# print(mangas)
-
 
 main_list = []
 
@@ -25,4 +22,4 @@ for manga in mangas:
     print(image['src'])
 
 
-# print(main_list)
+print(main_list)
